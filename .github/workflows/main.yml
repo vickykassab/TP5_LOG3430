@@ -32,9 +32,3 @@ jobs:
     - name: Run Locust tests
       run: |
         locust --headless -u 10000 -r 100 -t 3m -H http://127.0.0.1:5000 > locust_results.txt
-
-    - name: Upload Locust results
-      uses: actions/upload-artifact@v3
-      with:
-        name: locust-results
-        path: locust_results.txt
