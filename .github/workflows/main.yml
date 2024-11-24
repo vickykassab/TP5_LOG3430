@@ -32,3 +32,6 @@ jobs:
     - name: Run Locust tests
       run: |
         locust --headless -u 10000 -r 100 -t 3m -H http://127.0.0.1:5000 > locust_results.txt
+
+    - name: Display Locust results
+      run: cat locust_results.txt
